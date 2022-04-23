@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+:root {
+  font-size: 62.5%;
+  --Grey: #484848;
+  --Yellow: #fff900;
+  --Orange: #ff6c00;
+  --Very-Dark-Grey: #262626;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 8rem;
+  font-weight: 800;
+  letter-spacing: 3.5rem;
+}
+.bg{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+}
+.light {
+  position: absolute;
+  padding: 1rem 4rem 1rem 5rem;
+  width: 70rem;
+  height: 15vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  color: white;
+  mix-blend-mode: multiply;
+  position: relative;
+  text-shadow: 0 0 35px var(--Orange);
+}
+.move {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70rem;
+  height: 15vh;
+  background-color: var(--Grey);
+}
+ .move:before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0.5rem;
+   width: 8rem;
+   height: 100%;
+   background-color: var(--Yellow);
+   animation: lighting 1.5s steps(8) infinite;
+ }
+@keyframes lighting {
+  to {
+    left: 100%;
+  }
+}
